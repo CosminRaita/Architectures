@@ -1,0 +1,18 @@
+﻿@page
+@model UserModel
+
+@{
+    ViewData["Title"] = "Users";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    @foreach (var user in Model.Users)
+    {
+        <div>
+            <h3>@user.Username</h3>
+            <p>@user.Email</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Comments";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    @foreach (var comment in Model.Comments)
+    {
+        <div>
+            <h3>@comment.PostId</h3>
+            <p>@comment.Content</p>
+        </div>
+    }
+</div>

@@ -1,0 +1,18 @@
+﻿@page
+@model PostModel
+
+@{
+    ViewData["Title"] = "Posts";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    @foreach (var post in Model.Posts)
+    {
+        <div>
+            <h3>@post.Title</h3>
+            <p>@post.Content</p>
+        </div>
+    }
+</div>
